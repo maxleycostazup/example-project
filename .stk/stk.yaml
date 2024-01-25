@@ -1,0 +1,31 @@
+schema-version: v2
+kind: manifest
+spec:
+  type: app
+  plugins:
+    - name: local/base-html-plugin@0.0.1
+      alias: base-html-plugin-1706207848442
+      type: app
+      inputs:
+        title: Training - Stackspot
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: local/dummy-json-plugin@0.0.1
+      alias: dummy-json-plugin-1706208367919
+      type: app
+      inputs:
+        table_id: product-list
+        column_list: ID;TITLE;DESCRIPTION
+        attr_list: id;title;description
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
